@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Michi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+        .last-updated {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #2563eb;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+            color: #444;
+        }
+        .highlight-box {
+            background: #eff6ff;
+            border-left: 4px solid #2563eb;
+            padding: 16px;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-box h3 {
+            color: #1e40af;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .ai-disclosure {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .ai-disclosure h3 {
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+        .contact {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+            .container {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: October 2026</p>
+
+        <div class="highlight-box">
+            <h3>🔒 TL;DR - Quick Summary</h3>
+            <p>Michi is a privacy-first, local-first app. Your journeys, goals, checklists, sessions, and reflection notes are stored directly on your device in SQLite. We only transmit data to third-party AI providers when you explicitly create a journey or tidy notes, with mandatory consent and strict Zero Data Retention (ZDR) guarantees.</p>
+        </div>
+
+        <h2>1. On-Device Data Storage</h2>
+        <p>Your data (Journeys, Goals, Checklists, Practice Sessions, and Reflection Notes) is stored <strong>locally on your device</strong> in a private SQLite database. We do not inspect, collect, or sell your journeys, practice history, or personal notes.</p>
+        <p>Data never leaves your device unless:</p>
+        <ul>
+            <li>You explicitly use the "Generate with AI" feature to build a structured journey</li>
+            <li>You explicitly use the "Tidy Notes" feature on your reflection notes</li>
+        </ul>
+
+        <h2>2. AI Data Processing (Apple 5.1.2i & Google Play Disclosure)</h2>
+        
+        <div class="ai-disclosure">
+            <h3>⚠️ Third-Party AI Data Processing & Zero Data Retention</h3>
+            <p>When you explicitly invoke AI generation or note tidying, Michi transmits your <strong>goal title, experience level, and optional context</strong> through secure HTTPS to vetted AI providers via OpenRouter:</p>
+            <ul>
+                <li><strong>AI Providers:</strong> OpenAI (via Microsoft Azure), Meta Llama (via Groq), Mistral AI (EU Sovereign Cloud), and Google Gemini (via Google Cloud Vertex AI)</li>
+                <li><strong>Purpose:</strong> Generate customized sequential stages, goals, practice checklists, and tidy reflection notes</li>
+                <li><strong>Zero Data Retention (ZDR) Guarantee:</strong> All AI requests are routed exclusively to endpoints that enforce strict Zero Data Retention (<code>zdr: true</code>) and training denial (<code>data_collection: "deny"</code>). Your prompts are <strong>never used to train AI models</strong></li>
+                <li><strong>Security in Transit:</strong> All communications use TLS/HTTPS encryption</li>
+            </ul>
+        </div>
+
+        <p><strong>Your consent is required.</strong> Before your first AI generation, Michi presents an explicit consent modal that:</p>
+        <ul>
+            <li>Identifies the AI providers and transmission channels by name</li>
+            <li>Explains what data will be processed and why</li>
+            <li>Allows you to decline without losing core app functionality (you can create and track journeys 100% manually)</li>
+            <li>Provides an instant toggle to revoke AI consent anytime in Profile settings</li>
+        </ul>
+
+        <h2>3. What We Don't Do</h2>
+        <ul>
+            <li>❌ We do not sell your personal data or learning history to third parties</li>
+            <li>❌ We do not use your personal notes or goals to train AI models</li>
+            <li>❌ We do not track your behavior across other apps or websites</li>
+            <li>❌ We do not show you third-party advertisements</li>
+            <li>❌ We do not require a mandatory cloud account to use the app</li>
+        </ul>
+
+        <h2>4. Data Retention & Deletion</h2>
+        <p><strong>Local Data:</strong> All your journey data remains on your physical device until you delete the app or use the "Reset all data" feature in Profile settings.</p>
+        <p><strong>Database Export:</strong> You can export and import a complete, human-readable JSON backup of your database anytime from Profile settings.</p>
+        <p><strong>AI Logs:</strong> For diagnostic error monitoring and rate limiting, stateless anonymous counters and truncated diagnostic logs (first 100 characters) are retained for up to 30 days and automatically purged.</p>
+
+        <h2>5. Children's Privacy</h2>
+        <p>Michi is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p>
+
+        <h2>6. Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. We will notify you of any changes by updating the "Last Updated" date and posting the revised policy within the app.</p>
+
+        <h2>7. Contact Us</h2>
+        <div class="contact">
+            <p>If you have any questions about this Privacy Policy or want to exercise your data rights, contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:proj.el3vate@gmail.com">proj.el3vate@gmail.com</a></p>
+            <p><strong>In-App:</strong> Profile → Support & Feedback → Send Feedback</p>
+        </div>
+
+        <hr style="margin: 2rem 0; border: none; border-top: 1px solid #e5e7eb;">
+        
+        <p style="font-size: 0.9rem; color: #666; text-align: center;">
+            By using Michi, you agree to this Privacy Policy.<br>
+            If you do not agree, please do not use our app.
+        </p>
+    </div>
+</body>
+</html>
